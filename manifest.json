@@ -1,0 +1,19 @@
+{
+  "name": "Restore Session",
+  "description" : "TODO2",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "storage",
+    "sessions"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello-extensions.jpg"
+  }
+}
