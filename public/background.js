@@ -1,5 +1,12 @@
 /* eslint-env webextensions */
 
+
+import hugeStorageSync from './hugeStorageSync.js';
+
+console.log('hugeStorageSync', hugeStorageSync);
+
+console.log('Value:',  hugeStorageSync.get('test'));
+
 /**
  * API DOCS
  * https://developer.chrome.com/extensions/devguide
@@ -75,17 +82,17 @@ function getRandomToken() {
 
 const DEVICE_ID_STORAGE_KEY = 'deviceId';
 
-chrome.storage.sync.get(DEVICE_ID_STORAGE_KEY, (items) => {
-  var deviceId = items.deviceId;
-  if (deviceId) {
-    initiate(deviceId);
-  } else {
-    deviceId = getRandomToken();
-    chrome.storage.sync.set({[DEVICE_ID_STORAGE_KEY]: deviceId}, () => {
-      initiate(deviceId);
-    });
-  }
-});
+// chrome.storage.sync.get(DEVICE_ID_STORAGE_KEY, (items) => {
+//   var deviceId = items.deviceId;
+//   if (deviceId) {
+//     initiate(deviceId);
+//   } else {
+//     deviceId = getRandomToken();
+//     chrome.storage.sync.set({[DEVICE_ID_STORAGE_KEY]: deviceId}, () => {
+//       initiate(deviceId);
+//     });
+//   }
+// });
 
 function initiate (deviceId) {
   setInterval(async () => {

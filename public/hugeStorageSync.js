@@ -1,3 +1,5 @@
+/* eslint-env webextensions */
+
 /**
  * Based on https://github.com/kdzwinel/Context/blob/master/js/classes/HugeStorageSync.class.js
  * from https://stackoverflow.com/a/17722111/1378261
@@ -7,7 +9,7 @@ function getCacheKey(key, i) {
   return (i === 0) ? key : key + "_" + i;
 }
 
-module.exports = {
+export default {
   /**
    * Allows to save strings longer than QUOTA_BYTES_PER_ITEM in chrome.storage.sync by splitting them into smaller parts.
    * Please note that you still can't save more than QUOTA_BYTES.

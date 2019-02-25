@@ -14,3 +14,4 @@ Build process based on:
 - https://medium.com/@gilfink/building-a-chrome-extension-using-react-c5bfe45aaf36
 - https://medium.com/@gilfink/adding-web-interception-abilities-to-your-chrome-extension-fb42366df425
 - https://medium.com/@gilfink/using-messaging-in-chrome-extension-4ae65c0622f6
+- https://medium.com/front-end-hacking/es6-modules-in-chrome-extensions-an-introduction-313b3fce955b
